@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4 Actividad</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body class="bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">5 Actividad</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/views/usuario.html">Alumnos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/views/profesor.html">Profesores</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/views/sede.html">Sedes</a>
+                </li>
+            </ul> 
+        </div>
+    </nav>
+    <main class="m-2 rounded-lg pb-5">
+        <div class="container-fluid mt-3 p-1 bg-white">
+            <h5 class="p-1">Administrador de Sedes</h5>
+            <div class="table-container table-responsive">
+                <table class="table table-borderless" id="tablaSede">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre sede</th>
+                            <th>ID Región</th>
+                            <th>ID Comuna</th>
+                            <th>Controles</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="container-fluid mt-3 bg-white p-3 pb-4">
+            <h5>Ingresar Sede</h5> 
+            <div class="card">
+                <div class="card-header bg-dark text-white">Formulario Ingreso Sede</div>
+                <div class="card-body">
+                    <form id="formSede" novalidate>
+                        <div class="mb-3">
+                            <label for="nombreSede" class="form-label">Nombre Sede</label>
+                            <input type="text" class="form-control" id="nombreSede" required>
+                            <div class="invalid-feedback">Este campo no puede estar vacío.</div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="idRegion" class="form-label">Región: </label>
+                            <select class="form-select" id="idRegion" required>
+                            <option value="">Seleccione una región</option>
+                            <option value="1">Región 1</option>
+                            <option value="2">Región 2</option>
+                            </select>
+                            <div class="invalid-feedback">Debe seleccionar una región.</div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="idComuna" class="form-label">Comuna: </label>
+                            <select class="form-select" id="idComuna" required>
+                            <option value="">Seleccione una comuna</option>
+                            <option value="101">Comuna A</option>
+                            <option value="102">Comuna B</option>
+                            </select>
+                            <div class="invalid-feedback">Debe seleccionar una comuna.</div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Agregar Sede</button>
+                    </form>
+                </div>  
+            </div>
+        </div>
+    </main>
+    <footer class="fixed-bottom p-2 bg-dark text-white">
+        <p>4 Actividad Programacion Frontend</p>
+    </footer>
+    <script src="/assets/js/formularioSede.js"></script>
+</body>
+</html>

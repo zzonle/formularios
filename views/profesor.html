@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4 Actividad</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body class="bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">4 Actividad</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/views/usuario.html">Alumnos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/views/profesor.html">Profesores</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/views/sede.html">Sedes</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <main class="m-2 rounded-lg pb-5">
+        <div class="container-fluid mt-3 p-1 bg-white">
+            <h5 class="p-1">Administrador de Profesores</h5>
+            <div class="table-container">
+                <table class="table table-borderless" id="tablaProfesores">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Email</th>
+                            <th>Rut</th>
+                            <th>Edad</th>
+                            <th>Controles</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="container-fluid mt-3 bg-white p-3 pb-4">
+            <h5>Ingresar Usuarios</h5>
+            <form id="miFormulario">
+                <div class="form-row mb-3">
+                    <div class="col">
+                        <label for="nombre">Nombre</label>
+                        <input class="form-control" type="text" id="nombre" name="nombre">
+                        <span class="small text-muted">Ingresar Nombre</span>
+                        <div class="error-nombre text-danger small"></div> </div>
+                    <div class="col">
+                        <label for="email">Email</label>
+                        <input class="form-control" type="email" id="email" name="email">
+                        <span class="small text-muted">Ingresar Correo</span>
+                        <div class="error-email text-danger small"></div> </div>
+                </div>
+                <div class="form-row">
+                    <div class="col">
+                        <label for="rut">Rut</label>
+                        <input class="form-control" type="text" id="rut" name="rut">
+                        <span class="small text-muted">Ingresar Rut</span>
+                        <div class="error-rut text-danger small"></div> </div>
+                    <div class="col">
+                        <label for="edad">Edad</label>
+                        <input class="form-control" type="number" id="edad" name="edad" min="0" max="120">
+                        <span class="small text-muted">Ingresar edad</span>
+                        <div class="error-edad text-danger small"></div> 
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col">
+                        <label for="sede">Sede</label>
+                        <select name="sede" id="sede" class="form-control">
+                            <option value="">Seleccionar...</option>
+                            <option value="1">1 sede</option>
+                            <option value="2">2 sede</option>
+                            <option value="3">3 sede</option>
+                        </select>
+                        <div class="error-sede text-danger small"></div>
+                    </div>
+                    <div class="col">
+                        <label for="">Carrera</label>
+                        <select name="" id="carrera" class="form-control">
+                            <option value="">Seleccionar...</option>
+                            <option value="1">Ingeniería en Informatica </option>
+                            <option value="2">Analista de Ciberseguridad</option>
+                            <option value="3">Analista Programador</option>
+                        </select>
+                        <div class="error-carrera text-danger small"></div> 
+                    </div>
+                    <div class="col">
+                        <label for="asignatura">Asignatura</label>
+                        <select name="asignatura" id="asignatura" class="form-control">
+                            <option value="">Seleccionar...</option>
+                            <option value="1">1 Asignatura</option>
+                            <option value="2">2 Asignatura</option>
+                            <option value="3">3 Asignatura</option>
+                            <option value="4">4 Asignatura</option>
+                            <option value="5">5 Asignatura</option>
+                        </select>
+                        <div class="error-asignatura text-danger small"></div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col">
+                        <label for="descripcion">Descripcion</label>
+                        <textarea class="form-control" name="descripcion" id="descripcion"></textarea>
+                        <div class="error-descripcion text-danger small"></div>
+                    </div>
+                </div>
+                <button class="btn btn-primary mt-3" type="submit">Enviar</button>
+            </form>
+        </div>
+
+        <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header bg-dark text-white">
+                        <h5 class="modal-title" id="staticBackdropLabel">Editar Usuario</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <form action="" id="formularioEditarUsuario">
+                        <div class="modal-body">
+                            <div class="form-row">
+                                <div class="col">
+                                    <label for="editarNombre">Nombre</label>
+                                    <input type="text" name="editarNombre" id="editarNombre" class="form-control">
+                                    <div id="error-editarNombre" class="text-danger small"></div>
+                                </div>
+                                <div class="col">
+                                    <label for="editarEmail">Email</label>
+                                    <input type="email" name="editarEmail" id="editarEmail" class="form-control">
+                                    <div id="error-editarEmail" class="text-danger small"></div>
+                                </div>
+                            </div>
+                            <div class="form-row mt-2">
+                                <div class="col">
+                                    <label for="editarRut">Rut</label>
+                                    <input type="text" name="editarRut" id="editarRut" class="form-control">
+                                    <div id="error-editarRut" class="text-danger small"></div>
+                                </div>
+                                <div class="col">
+                                    <label for="editarEdad">Edad</label>
+                                    <input type="number" name="editarEdad" id="editarEdad" class="form-control" min="0" max="120">
+                                    <div id="error-editarEdad" class="text-danger small"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-warning text-white" id="btn-editar">Editar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <footer class="fixed-bottom p-2 bg-dark text-white">
+        <p>4 Actividad Programacion Frontend</p>
+    </footer>
+    <script src="/assets/js/formularioProfesor.js"></script>
+</body>
+</html>

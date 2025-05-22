@@ -1,0 +1,26 @@
+.table-container {
+    max-height: 400px; /* Ajusta la altura máxima según tus necesidades */
+    overflow-y: auto;
+}
+
+.table th {
+    position: sticky;
+    top: 0;
+    background-color: #f8f9fa; /* Color de fondo para que tape al hacer scroll */
+    z-index: 1; /* Asegura que el encabezado esté por encima del contenido */
+}
+
+.table-dark th {
+    background-color: #212529; /* Color de fondo para encabezados oscuros */
+}
+
+select {
+  backdrop-filter: none !important;
+  background-color: white !important;
+  border: 1px solid #ced4da !important;
+  border-radius: 0.25rem !important;
+}
+
+
+
+
